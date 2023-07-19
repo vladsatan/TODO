@@ -1,0 +1,29 @@
+.CreateTodo {
+    margin: 40px auto;
+}
+
+.CreateTodo input {
+    width: 30%;
+    padding: 7px;
+    background-color: rgba(240, 248, 255, 0);
+    outline: none;
+    border: 1px solid #828691;
+    color: white;
+}
+
+.CreateTodo button {
+    padding: 7px 25px;
+    background-color: rgba(240, 248, 255, 0);
+    outline: none;
+    border: none;
+    border-top: 1px solid #828691;
+    border-right: 1px solid #828691;
+    border-bottom: 1px solid #828691;
+    color: #44c0b6;
+    font-weight: 600;
+    transition: .2s;
+}
+
+.CreateTodo button:hover {
+    background-color: #10453f;
+}

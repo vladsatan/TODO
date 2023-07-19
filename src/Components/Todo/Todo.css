@@ -1,0 +1,17 @@
+.todo {
+    width: 37%;
+    background-color: #494847;
+    text-align: left;
+    padding: 5px 20px;
+    border-left: 5px solid #cf972e;
+    color: #bdbdbd;
+    margin: 10px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    word-wrap: break-word;
+}
+
+.task-ready {
+    text-decoration: line-through 3px #a1362aaa;
+}
