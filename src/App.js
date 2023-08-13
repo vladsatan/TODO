@@ -1,19 +1,19 @@
 import './App.css';
 import CreateTodo from './Components/CreateTodo/CreateTodo';
 import Todo from './Components/Todo/Todo';
-import data from './data';
-import { useState } from 'react';
+import { useSelector } from 'react-redux/es/hooks/useSelector';
 
 function App() {
 
-  const [todos, setTodos] = useState(data);
+  const todos = useSelector((state) => state.todoList.todos);
+  console.log(todos);
 
   return (
     <div className="App">
         <h1>React todo app</h1>
-        <CreateTodo todos={todos} setTodos={setTodos} />
+        <CreateTodo />
         {todos.length > 0 ? 
-        todos.map( todo => <Todo item={todo} todos={todos} setTodos={setTodos} key={todo.text} />) 
+        todos.map( todo => <Todo item={todo} key={todo.id} />) 
         : <p className='empty'>no todos</p>}
     </div>
   );

@@ -1,22 +1,21 @@
 import React from 'react';
 import "./Todo.css";
+import { useDispatch } from 'react-redux';
+import { changeStatus } from '../../store/reducers/todos/todoSlice';
 
 const Todo = (props) => {
 
-    let { item, todos, setTodos } = props;
+    let { item } = props;
+    const dispatch = useDispatch();
 
-    const changeStatus = () => {
-        let currIndex = todos.findIndex(e => item.id === e.id);
-        let copy = Object.assign([], todos);
-        item.status = !item.status
-        copy[currIndex] = item
-        setTodos(copy);
+    const toggleStatus = (id) => {
+       dispatch(changeStatus(id));
     }
 
     return (
         <div className='todo'>
             <p className={item.status === true ? 'task-ready' : ''}>{item.text}</p>
-            <input type="checkbox" checked={item.status} onChange={changeStatus} />
+            <input type="checkbox" checked={item.status} onClick={()=> toggleStatus(item.id)} />
         </div>
     );
 
