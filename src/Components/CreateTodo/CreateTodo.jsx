@@ -3,6 +3,8 @@ import "./CreateTodo.css";
 import { v4 } from 'uuid';
 import { useDispatch } from 'react-redux'
 import { addTodo } from '../../store/reducers/todos/todoSlice';
+import { Box, TextField, Button } from '@mui/material';
+import theme from '../../styles/stylesConfig';
 
 const CreateTodo = () => {
 
@@ -22,12 +24,12 @@ const CreateTodo = () => {
 
 
     return (
-        <div className='CreateTodo'>
+        <Box sx={theme.box}>
             <form onSubmit={handleSubmit}>
-                <input type='text' placeholder='Create a new todo' onChange={handleChange} />
-                <button>Add</button>
+                <TextField sx={theme.searchInput} label='Create a new todo' onChange={handleChange} />
+                <Button color="secondary" sx={theme.button} variant="contained" type='submit'>Add</Button>
             </form>
-        </div>
+        </Box>
     );
 
 }

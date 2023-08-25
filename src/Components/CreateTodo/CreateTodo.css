@@ -2,6 +2,12 @@
     margin: 40px auto;
 }
 
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .CreateTodo input {
     width: 30%;
     padding: 7px;

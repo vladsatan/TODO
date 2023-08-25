@@ -2,9 +2,9 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
     todos: [
-        { id: 3, text: 'Learn JavaScript', status: true },
-        { id: 2, text: 'Learn React', status: true },
-        { id: 1, text: 'Learn Redux', status: false }
+        // { id: 3, text: 'Learn JavaScript', status: true },
+        // { id: 2, text: 'Learn React', status: true },
+        // { id: 1, text: 'Learn Redux', status: false }
     ]
 }
 
